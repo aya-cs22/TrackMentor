@@ -35,4 +35,3 @@ lessonSchema.pre('save', function (next) {
 // creat and export lesson module
 const Lesson = mongoose.model('Lesson', lessonSchema);
 module.exports = Lesson;
-c
