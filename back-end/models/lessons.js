@@ -14,6 +14,10 @@ const lessonSchema = new mongoose.Schema({
     ref: 'Language',
     required: true
   },
+  quizId: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Quiz'
+  },
   createdAt: {
     type: Date,
     default: Date.now
