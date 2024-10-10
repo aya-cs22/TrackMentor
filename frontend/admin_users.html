@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="admin_users.css">
+    <title>Admin Users</title>
+</head>
+<body>
+    <header>
+        <h1>Admin Users Dashboard</h1>
+        <nav>
+            <ul>
+                <li><a href="tracks.html">Tracks</a></li>
+                <li><a href="admin_languages.html">Languages</a></li>
+                <li><a href="admin_lessons.html">Lessons</a></li>
+                <li><a href="admin_quizzes.html">Quizzes</a></li>
+            </ul>
+        </nav>
+        <p>Welcome to the admin panel. Here, you can manage users of the platform effectively and efficiently.</p>
+    </header>
+
+    <section class="user-form-section">
+        <h2>Add New User</h2>
+        <form id="addUserForm">
+            <input type="text" id="addName" placeholder="User Name" required>
+            <input type="email" id="addEmail" placeholder="User Email" required>
+            <input type="password" id="addPassword" placeholder="Password" required>
+            <select id="addRole" required>
+                <option value="" disabled selected>Select Role</option>
+                <option value="admin">Admin</option>
+                <option value="user">User</option>
+            </select>
+            <button type="submit">Add User</button>
+        </form>
+        <p class="form-description">Fill in the details above to add a new user to the platform. Make sure the email is valid.</p>
+    </section>
+
+    <section class="user-edit-section">
+        <h2>Edit Existing User</h2>
+        <form id="editUserForm">
+            <input type="text" id="editName" placeholder="User Name" required>
+            <input type="email" id="editEmail" placeholder="User Email" required>
+            <select id="editRole" required>
+                <option value="" disabled selected>Select Role</option>
+                <option value="admin">Admin</option>
+                <option value="user">User</option>
+            </select>
+            <button type="submit">Save Changes</button>
+        </form>
+        <p class="form-description">Edit user details above. You don't need to provide a password.</p>
+    </section>
+
+    <section class="users-list-section">
+        <h2>Existing Users</h2>
+        <div id="usersList">
+            <p>Loading users... Please wait.</p>
+        </div>
+        <p class="users-list-description">Below is the list of all users registered on the platform. You can manage their roles and access as needed.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 ProgramPlex. All Rights Reserved.</p>
+    </footer>
+
+    <script src="admin_users.js"></script>
+</body>
+</html>
