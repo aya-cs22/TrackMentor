@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tracks.css">
+    <title>Manage Tracks</title>
+</head>
+<body>
+    <header>
+        <h1>Manage Language Tracks</h1>
+        <nav>
+            <ul>
+                <li><a href="admin_users.html">Users</a></li>
+                <li><a href="admin_languages.html">Languages</a></li>
+                <li><a href="admin_lessons.html">Lessons</a></li>
+                <li><a href="admin_quizzes.html">Quizzes</a></li>
+            </ul>
+        </nav>
+        <p>Welcome to the tracks management panel. Here, you can add, update, or remove language tracks and manage their associated lessons.</p>
+    </header>
+
+    <section class="track-form-section">
+        <h2>Add or Update Track</h2>
+        <form id="trackForm">
+            <input type="hidden" id="trackId" />
+            <label for="name">Track Name:</label>
+            <input type="text" id="name" placeholder="Enter the track name" required />
+            
+            <label for="description">Description:</label>
+            <input type="text" id="description" placeholder="Enter a brief description" required />
+            
+            <button type="submit">Add/Update Track</button>
+        </form>
+        <p class="form-description">Use the form above to create new tracks or update existing ones. Make sure all required fields are filled in correctly.</p>
+    </section>
+    
+
+    <section class="tracks-list-section">
+        <h2>Existing Tracks</h2>
+        <div id="tracksList">
+            <p>Loading tracks... Please wait.</p>
+        </div>
+        <p class="tracks-list-description">Below is the list of all language tracks available on the platform. You can view or modify them as needed.</p>
+    </section>
+    <footer>
+        <p>&copy; 2024 ProgramPlex. All Rights Reserved.</p>
+    </footer>
+
+    <script src="tracks.js"></script>
+</body>
+</html>
