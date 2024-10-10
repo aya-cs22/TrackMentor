@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="admin.css">
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <header>
+        <h1>Admin Dashboard</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="container">
+            <div class="card">
+                <h2>Users</h2>
+                <p>Manage the users of the platform. You can add, edit, or remove users as needed.</p>
+                <button onclick="window.location.href='http://127.0.0.1:5500/frontend/admin_users.html'">View Users</button>
+            </div>
+            <div class="card">
+                <h2>Tracks</h2>
+                <p>Manage the language tracks available on the platform. Add or remove tracks for better learning paths.</p>
+                <button onclick="window.location.href='http://127.0.0.1:5500/frontend/tracks.html'">View Tracks</button>
+            </div>
+            <div class="card">
+                <h2>Languages</h2>
+                <p>Manage the available languages for the platform. Ensure users have access to diverse language options.</p>
+                <button onclick="window.location.href='http://127.0.0.1:5500/frontend/admin_languages.html'">View Languages</button>
+            </div>
+            <div class="card">
+                <h2>Lessons</h2>
+                <p>Manage the lessons for each track. Add new lessons to enhance the learning experience.</p>
+                <button onclick="window.location.href='http://127.0.0.1:5500/frontend/admin_lessons.html'">View Lessons</button>
+            </div>
+            <div class="card">
+                <h2>Quizzes</h2>
+                <p>Manage the quizzes associated with lessons. Create quizzes to test users' knowledge and understanding.</p>
+                <button onclick="window.location.href='http://127.0.0.1:5500/frontend/admin_quizzes.html'">View Quizzes</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 ProgramPlex. All Rights Reserved.</p>
+    </footer>
+
+    <script src="admin.js"></script>
+</body>
+</html>
