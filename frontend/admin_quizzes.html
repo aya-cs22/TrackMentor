@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="admin_quizzes.css">
+    <title>Admin Quizzes</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="admin_users.html">Users</a></li>
+            <li><a href="tracks.html">Tracks</a></li>
+            <li><a href="admin_languages.html">Languages</a></li>
+            <li><a href="admin_lessons.html">Lessons</a></li>
+        </ul>
+    </nav>
+    <h1>Admin Quizzes</h1>
+    <form id="quizForm">
+        <input type="text" id="title" placeholder="Quiz Title" required>
+        <textarea id="description" placeholder="Quiz Description" required></textarea>
+        <input type="text" id="lessonId" placeholder="Lesson ID" required>
+        <div id="questions"></div>
+        <button type="button" onclick="addQuestion()">Add Question</button>
+        <button type="submit">Save Quiz</button>
+    </form>
+    <h2>Existing Quizzes</h2>
+    <div id="quizzesList"></div>
+    <footer>
+        <p>&copy; 2024 ProgramPlex. All Rights Reserved.</p>
+    </footer>
+    <script src="admin_quizzes.js"></script>
+</body>
+</html>
