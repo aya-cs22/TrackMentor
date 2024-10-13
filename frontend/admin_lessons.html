@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="admin_lessons.css">
+    <title>Admin - Manage Lessons</title>
+</head>
+<body>
+    <header>
+        <h1>Manage Lessons</h1>
+        <p>Control and update lessons from this panel</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="admin_users.html">Users</a></li>
+            <li><a href="tracks.html">Tracks</a></li>
+            <li><a href="admin_languages.html">Languages</a></li>
+            <li><a href="admin_quizzes.html">Quizzes</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <!-- Section for Adding New Lesson -->
+        <div class="card">
+            <h2>Add New Lesson</h2>
+            <form id="addLessonForm">
+                <label for="lessonTitle">Lesson Title:</label>
+                <input type="text" id="lessonTitle" required>
+                
+                <label for="lessonContent">Content:</label>
+                <textarea id="lessonContent" required></textarea>
+
+                <label for="lessonLanguageId">Language ID:</label>
+                <input type="text" id="lessonLanguageId" required>
+
+                <label for="quizId">Quiz ID:</label>
+                <input type="text" id="quizId" required>
+
+                <button type="submit">Add Lesson</button>
+            </form>
+        </div>
+
+        <!-- Section for Editing or Deleting Lesson -->
+        <div class="card">
+            <h2>Edit or Delete Lesson</h2>
+            <form id="editLessonForm">
+                <label for="editLessonId">Lesson ID:</label>
+                <input type="text" id="editLessonId" required>
+                
+                <button type="button" onclick="fetchLesson()">Fetch Lesson</button>
+                <div id="lessonDetails" style="display:none;">
+                    <label for="editLessonTitle">Lesson Title:</label>
+                    <input type="text" id="editLessonTitle" required>
+                    
+                    <label for="editLessonContent">Content:</label>
+                    <textarea id="editLessonContent" required></textarea>
+
+                    <label for="editLessonLanguageId">Language ID:</label>
+                    <input type="text" id="editLessonLanguageId" required>
+
+                    <label for="editQuizId">Quiz ID:</label>
+                    <input type="text" id="editQuizId" required>
+
+                    <button type="submit" onclick="updateLesson(event)">Update Lesson</button>
+                    <button type="button" onclick="deleteLesson()">Delete Lesson</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Section for Displaying All Lessons -->
+        <div class="card">
+            <h2>All Lessons</h2>
+            <ul id="lessonsList"></ul>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 ProgramPlex. All Rights Reserved.</p>
+    </footer>
+    <script src="admin_lessons.js"></script>
+</body>
+</html>
