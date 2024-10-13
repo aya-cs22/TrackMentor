@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="admin_languages.css">
+    <title>Admin - Manage Languages</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="admin_users.html">Users</a></li>
+            <li><a href="tracks.html">Tracks</a></li>
+            <li><a href="admin_lessons.html">Lessons</a></li>
+            <li><a href="admin_quizzes.html">Quizzes</a></li>
+        </ul>
+    </nav>
+    <h1>Manage Languages</h1>
+    <div class="container">
+        <div class="card">
+            <h2>Add New Language</h2>
+            <form id="addLanguageForm">
+                <label for="languageName">Language Name:</label>
+                <input type="text" id="languageName" required>
+                
+                <label for="languageDescription">Description:</label>
+                <input type="text" id="languageDescription" required>
+
+                <label for="trackId">Track ID:</label>
+                <input type="text" id="trackId" required>
+
+                <button type="submit">Add Language</button>
+            </form>
+        </div>
+        
+        <div class="card">
+            <h2>Edit or Delete Language</h2>
+            <form id="editLanguageForm">
+                <label for="editLanguageId">Language ID:</label>
+                <input type="text" id="editLanguageId" required>
+                
+                <button type="button" onclick="fetchLanguage()">Fetch Language</button>
+                <div id="languageDetails" style="display:none;">
+                    <label for="editLanguageName">Language Name:</label>
+                    <input type="text" id="editLanguageName" required>
+                    
+                    <label for="editLanguageDescription">Description:</label>
+                    <input type="text" id="editLanguageDescription" required>
+
+                    <label for="editTrackId">Track ID:</label>
+                    <input type="text" id="editTrackId" required>
+
+                    <button type="submit" onclick="updateLanguage(event)">Update Language</button>
+                </div>
+            </form>
+        </div>
+
+        <h2>Available Languages</h2>
+        <ul id="languagesList"></ul>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 ProgramPlex. All Rights Reserved.</p>
+    </footer>
+
+    <script src="admin_languages.js"></script>
+</body>
+</html>
