@@ -6,7 +6,6 @@ const editQuill = new Quill('#editEditor', {
     theme: 'snow'
 });
 
-// Function to add a new lesson
 document.getElementById('addLessonForm').addEventListener('submit', async (event) => {
     event.preventDefault(); 
 
@@ -21,7 +20,7 @@ document.getElementById('addLessonForm').addEventListener('submit', async (event
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': 'Bearer ' + localStorage.getItem('token') // Use token from localStorage
+                'Authorization': 'Bearer ' + localStorage.getItem('token')
             },
             body: JSON.stringify(lessonData)
         });
@@ -40,7 +39,6 @@ document.getElementById('addLessonForm').addEventListener('submit', async (event
     }
 });
 
-// Function to fetch all lessons
 async function loadLessons() {
     try {
         const response = await fetch(lessonsApiUrl);
@@ -68,37 +66,31 @@ async function loadLessons() {
         });
     } catch (error) {
         console.error('Error loading lessons:', error);
-        alert('Failed to load lessons. Please try again.');
     }
 }
 
-// Function to fetch a specific lesson for editing
 async function fetchLesson(lessonId) {
     try {
         const response = await fetch(`${lessonsApiUrl}/${lessonId}`);
         const lesson = await response.json();
-        if (lesson) {
-            document.getElementById('editLessonId').value = lesson._id;
-            document.getElementById('editLessonTitle').value = lesson.title;
-            editQuill.root.innerHTML = lesson.content; 
-            document.getElementById('editLessonLanguageId').value = lesson.languageId;
-            document.getElementById('lessonDetails').style.display = 'block'; 
-        } else {
-            alert('Lesson not found');
-        }
+
+        document.getElementById('editLessonId').value = lesson._id;
+        document.getElementById('editLessonTitle').value = lesson.title;
+        editQuill.root.innerHTML = lesson.content;
+        document.getElementById('editLessonLanguageId').value = lesson.languageId;
+        document.getElementById('lessonDetails').style.display = 'block';
     } catch (error) {
         console.error('Error fetching lesson:', error);
-        alert('Failed to fetch lesson. Please try again.');
     }
 }
 
-// Function to update a lesson
 async function updateLesson(event) {
     event.preventDefault();
     const lessonId = document.getElementById('editLessonId').value;
+
     const lessonData = {
         title: document.getElementById('editLessonTitle').value,
-        content: editQuill.root.innerHTML,
+        content: editQuill.root.innerHTML, 
         languageId: document.getElementById('editLessonLanguageId').value
     };
 
@@ -114,15 +106,15 @@ async function updateLesson(event) {
 
         const result = await response.json();
         alert(result.message || 'Lesson updated successfully!');
-        loadLessons();
+
         document.getElementById('lessonDetails').style.display = 'none';
+        loadLessons();
     } catch (error) {
         console.error('Error updating lesson:', error);
         alert('Failed to update lesson. Please try again.');
     }
 }
 
-// Function to delete a lesson
 async function deleteLesson(lessonId) {
     try {
         const response = await fetch(`${lessonsApiUrl}/${lessonId}`, {
@@ -141,5 +133,4 @@ async function deleteLesson(lessonId) {
     }
 }
 
-// Initial load of lessons
-loadLessons();
+window.onload = loadLessons;
