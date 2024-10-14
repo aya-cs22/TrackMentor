@@ -12,11 +12,11 @@ const loadTracks = async () => {
         if (response.ok) {
             const tracks = await response.json();
             const tracksList = document.getElementById('tracksList');
-            tracksList.innerHTML = ''; // Clear previous content
+            tracksList.innerHTML = '';
 
             tracks.forEach(track => {
                 const trackItem = document.createElement('div');
-                trackItem.className = 'track-item'; // Add a class for styling
+                trackItem.className = 'track-item';
 
                 const trackName = document.createElement('h3');
                 trackName.textContent = track.name;
