@@ -1,18 +1,15 @@
-/* Reset default browser styles */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* Body styling */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f7f9fc;
     color: #333;
 }
 
-/* Header styling */
 header {
     background-color: #56CCF2;
     color: white;
@@ -21,19 +18,16 @@ header {
     margin-bottom: 20px;
 }
 
-/* Main title styling */
 h1 {
     margin-bottom: 10px;
     font-size: 2.5em;
 }
 
-/* Paragraph styling in header */
 header p {
     font-size: 1.1em;
     margin-top: 5px;
 }
 
-/* Container for the cards */
 .container {
     display: flex;
     flex-direction: column;
@@ -41,7 +35,6 @@ header p {
     padding: 0 20px;
 }
 
-/* Card styling */
 .card {
     background: white;
     border-radius: 10px;
@@ -52,26 +45,22 @@ header p {
     max-width: 600px;
 }
 
-/* Card title styling */
 .card h2 {
     color: #2C3E50;
     margin-bottom: 10px;
     font-size: 1.8em;
 }
 
-/* Form styling */
 form {
     display: flex;
     flex-direction: column;
 }
 
-/* Label styling */
 label {
     margin-top: 10px;
     font-weight: bold;
 }
 
-/* Input and textarea styling */
 input[type="text"],
 textarea {
     padding: 12px;
@@ -81,14 +70,12 @@ textarea {
     transition: border-color 0.3s;
 }
 
-/* Focus effect on inputs */
 input[type="text"]:focus,
 textarea:focus {
     border-color: #56CCF2;
     outline: none;
 }
 
-/* Button styling */
 button {
     padding: 12px;
     background-color: #E74C3C;
@@ -101,26 +88,22 @@ button {
     transition: background-color 0.3s, transform 0.3s;
 }
 
-/* Hover effect on buttons */
 button:hover {
     background-color: #C0392B;
     transform: translateY(-2px);
 }
 
-/* Paragraph styling inside cards */
 .card p {
     font-size: 0.95em;
     color: #666;
     margin-top: 10px;
 }
 
-/* Navigation bar styling */
 nav {
     background-color: #56CCF2; 
     padding: 10px 0; 
 }
 
-/* Navigation list styling */
 nav ul {
     list-style-type: none;
     padding: 0; 
@@ -129,12 +112,10 @@ nav ul {
     margin: 0; 
 }
 
-/* Navigation list items styling */
 nav ul li {
     margin: 0 20px; 
 }
 
-/* Navigation links styling */
 nav ul li a {
     text-decoration: none; 
     color: white; 
@@ -144,14 +125,10 @@ nav ul li a {
     transition: background-color 0.3s, color 0.3s; 
 }
 
-/* Hover effect on navigation links */
 nav ul li a:hover {
     background-color: #E74C3C; 
     color: white; 
 }
-
-
-
 
 footer {
     text-align: center;
