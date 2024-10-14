@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="admin_lessons.css">
     <title>Admin - Manage Lessons</title>
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -20,7 +21,6 @@
         </ul>
     </nav>
     <div class="container">
-        <!-- Section for Adding New Lesson -->
         <div class="card">
             <h2>Add New Lesson</h2>
             <form id="addLessonForm">
@@ -28,19 +28,15 @@
                 <input type="text" id="lessonTitle" required>
                 
                 <label for="lessonContent">Content:</label>
-                <textarea id="lessonContent" required></textarea>
+                <div id="editor"></div>
 
                 <label for="lessonLanguageId">Language ID:</label>
                 <input type="text" id="lessonLanguageId" required>
-
-                <label for="quizId">Quiz ID:</label>
-                <input type="text" id="quizId" required>
 
                 <button type="submit">Add Lesson</button>
             </form>
         </div>
 
-        <!-- Section for Editing or Deleting Lesson -->
         <div class="card">
             <h2>Edit or Delete Lesson</h2>
             <form id="editLessonForm">
@@ -53,13 +49,10 @@
                     <input type="text" id="editLessonTitle" required>
                     
                     <label for="editLessonContent">Content:</label>
-                    <textarea id="editLessonContent" required></textarea>
+                    <div id="editEditor"></div>
 
                     <label for="editLessonLanguageId">Language ID:</label>
                     <input type="text" id="editLessonLanguageId" required>
-
-                    <label for="editQuizId">Quiz ID:</label>
-                    <input type="text" id="editQuizId" required>
 
                     <button type="submit" onclick="updateLesson(event)">Update Lesson</button>
                     <button type="button" onclick="deleteLesson()">Delete Lesson</button>
@@ -67,7 +60,6 @@
             </form>
         </div>
 
-        <!-- Section for Displaying All Lessons -->
         <div class="card">
             <h2>All Lessons</h2>
             <ul id="lessonsList"></ul>
@@ -76,6 +68,7 @@
     <footer>
         <p>&copy; 2024 ProgramPlex. All Rights Reserved.</p>
     </footer>
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
     <script src="admin_lessons.js"></script>
 </body>
 </html>
