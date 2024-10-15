@@ -65,5 +65,4 @@ const checkAnswers = () => {
 };
 
 document.getElementById('submitQuiz').onclick = checkAnswers;
-
 window.onload = loadQuizzes;
