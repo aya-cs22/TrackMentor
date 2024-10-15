@@ -1,7 +1,7 @@
 # Fall Project
 
 ## Project Overview
-This is the **Fall Project**, a web application designed using HTML, CSS, and JavaScript on the frontend, with a Node.js and Express backend. The application is connected to a MongoDB database for data storage, using JWT for authentication and Nodemailer for sending emails.
+This is the **TrackMentor**, a web application designed using HTML, CSS, and JavaScript on the frontend, with a Node.js and Express backend. The application is connected to a MongoDB database for data storage, using JWT for authentication and Nodemailer for sending emails.
 
 ## Features
 - User registration and login with JWT authentication.
