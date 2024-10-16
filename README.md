@@ -56,3 +56,9 @@ Make sure you have Node.js and MongoDB installed.
 
 ## Usage
 Once the application is running, navigate to `http://localhost:5001` to interact with the app.
+
+## Contact Information
+- GitHub: [Aya's GitHub](https://github.com/aya-cs22)
+- Twitter: [Aya's Twitter](https://x.com/?lang=en)
+- LinkedIn: [Aya's LinkedIn](https://www.linkedin.com/in/aya-anwar-473115279/)
+- Live Demo: [TrackMentor Demo](https://youtu.be/6xoCjvFsg8M?si=Z8WEKzdbsWNV8Oac)
