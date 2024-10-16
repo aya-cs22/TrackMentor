@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Email</title>
+    <link rel="stylesheet" href="verify.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#courses">Courses</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="verify-email">
+        <h1>Verify Your Email</h1>
+        <p>To complete your registration, please verify your email address. Enter the verification code sent to your email.</p>
+        
+        <form id="verifyForm">
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="text" id="verificationCode" placeholder="Verification Code" required>
+            <button type="submit">Verify</button>
+        </form>
+        <p id="verifyMessage"></p>
+    </section>
+
+    <section id="help">
+        <h2>Need Help?</h2>
+        <p>If you encounter any issues while verifying your email, feel free to contact our support team. We are here to help you!</p>
+        <p>Email: <a href="mailto:aya786930@gmail.com">aya786930@gmail.com</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 ProgramPlex. All Rights Reserved.</p>
+    </footer>
+
+    <script src="verify.js"></script> 
+</body>
+</html>
