@@ -1,0 +1,115 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+header {
+    background-color: #56CCF2;
+    padding: 15px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #56CCF2;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Register Section */
+#register {
+    background-color: white;
+    padding: 50px 20px;
+    max-width: 500px;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#register h1 {
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#registerForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#registerForm input {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#registerForm input:focus {
+    border-color: #2C3E50;
+    outline: none;
+}
+
+#registerForm button {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    font-size: 1.2rem;
+    background-color: #E74C3C;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#registerForm button:hover {
+    background-color: #2C3E50;
+}
+
+#registerMessage {
+    margin-top: 20px;
+    color: #2C3E50;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #register {
+        padding: 30px 15px;
+    }
+
+    #registerForm input, #registerForm button {
+        max-width: 100%;
+    }
+}
